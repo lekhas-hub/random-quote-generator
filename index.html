@@ -51,9 +51,21 @@
         ];
 
         function showQuote() {
-            let randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quote").innerText = quotes[randomIndex];
-        }
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+
+    let colors = [
+        "#ffe066",
+        "#b2f2bb",
+        "#74c0fc",
+        "#ffc9c9",
+        "#d0bfff"
+    ];
+
+    let randomColor = Math.floor(Math.random() * colors.length);
+
+    document.getElementById("quote").innerText = quotes[randomIndex];
+    document.body.style.backgroundColor = colors[randomColor];
+}
     </script>
 
 </body>
