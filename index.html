@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f5f5;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #quote {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Quote Generator</h1>
+
+        <button onclick="showQuote()">Get Quote</button>
+
+        <div id="quote">Click the button to see a quote</div>
+    </div>
+
+    <script>
+        let quotes = [
+            "Believe in yourself.",
+            "Success comes from consistency.",
+            "Dream big and work hard.",
+            "Never stop learning.",
+            "Small progress is still progress."
+        ];
+
+        function showQuote() {
+            let randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerText = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
